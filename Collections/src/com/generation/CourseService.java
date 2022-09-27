@@ -27,18 +27,28 @@ public class CourseService
 
     public void enrollStudent(String studentId, String courseId){
         //TODO implement so it adds the given course form the student
+    	Student s = students.get(studentId);  // Obtiene y almacena el id del estudiante
+    	Course c = courses.get(courseId);	//Obtiene y almacena el id del curso
+    	s.enroll(c); // a s le aplica la funcion enroll con el parametro c
     }
 
     public void unEnrollStudent(String studentId, String courseId){
         //TODO implement so it removes the given course form the student
+    	Student s = students.get(studentId);  // Obtiene y almacena el id del estudiante
+    	Course c = courses.get(courseId);	//Obtiene y almacena el id del curso
+    	s.unEnroll(c); // a s le aplica la funcion unEnroll con el parametro c
     }
 
     public void displayCourseInformation(String courseId){
         //TODO implement so it shows the course name, id and credits
+    	Course c = courses.get(courseId);
+    	System.out.println(c.toString());
     }
 
     public void displayStudentInformation(String studentId){
         //TODO implement so it shows the student name, id and list of enrolled courses
+    	Student s = students.get(studentId);
+    	System.out.println(s.toString());
     }
 
 

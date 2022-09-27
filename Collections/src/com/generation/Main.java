@@ -8,6 +8,7 @@ public class Main
 
         String courseId = "math_01";
         String studentId = "120120";
+        
         courseService.displayCourseInformation( courseId );
         courseService.displayStudentInformation( studentId);
 
